@@ -1,9 +1,9 @@
 from django.shortcuts import render
+from .models import tweet
 
 # Create your views here.
 
-tweets =[{'name': 'Mati', 'text': 'To jest pierwszy wpis na wroblu'},{'name': 'Jacek', 'text': 'Jestem drugi'}]
 
 def home(request):
-	context ={'tweets' : tweets}
+	context ={'tweets' : tweet.objects.all}
 	return render(request, 'feed/home.html',context)

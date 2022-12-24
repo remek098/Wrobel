@@ -2,19 +2,21 @@
 
 {%block content%}
 
-	<div class ='container'></div>
+	<div class ='container'>
 	{% for tweet in tweets %}
 
-		
+		<br> <br>
 		<div class="card">
 			<div class="card-header">
-				<a href="#"> {{tweet.name}} </a>
+				<a href="#"><h4>{{tweet.uname}}</h4></a>
+				<p>{{tweet.datetime}}</p>
 			</div>
 
 			<div class="card-body">
-			<p class="card-text"> {{tweet.text}}</p>
+			<p class="card-text"><h5>{{tweet.text}}</h5></p>
 			</div>
 		</div>
 
 	{% endfor %}
+	</div>
 {%endblock content%}
