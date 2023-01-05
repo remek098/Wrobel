@@ -22,7 +22,9 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   
       <a class="nav-link" href="{% url 'home' %}">Home</a>
-      <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+      <a class="navbar-brand" href="{% url 'profile' %}">
+        <img class="rounded-circle account-img img" src="{{user.profile.image.url}}" width="50" height="50" alt="Profile">
+      </a>
       <a class="nav-link" href="{% url 'logout' %}">Logout</a>
     </nav>
 
